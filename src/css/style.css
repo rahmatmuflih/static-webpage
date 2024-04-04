@@ -3,11 +3,9 @@ body {
   background-color: #232830;
   color: white;
   font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
 }
 hr {
-  width: 200vw;
-  margin-left: -50vw;
+  margin: 0 -10000px;
   border: 3px solid #4d4d4d;
   opacity: 20%;
 }
@@ -15,7 +13,9 @@ a:any-link {
   color: black;
   text-decoration: none;
 }
-
+.wrapper {
+  overflow-x: hidden;
+}
 .container {
   margin: 50px 100px;
 }
@@ -107,8 +107,11 @@ a:any-link {
   padding: 29px 27px;
   margin: 37px 0;
   color: #0f1217;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.card img {
+.card-body img {
   width: 330px;
   height: 160px;
   border-radius: 22px;
@@ -117,9 +120,6 @@ a:any-link {
   width: 3.45px;
   height: 3.45px;
   margin: 0 8px;
-}
-.card-footer {
-  margin-top: 80px;
 }
 .nav-page {
   display: flex;
@@ -171,9 +171,6 @@ a:any-link {
   }
 }
 @media (max-width: 1220px) {
-  body {
-    overflow-x: hidden;
-  }
   .content-menu {
     overflow-x: scroll;
   }
@@ -183,9 +180,9 @@ a:any-link {
     justify-content: center;
   }
 }
-@media (max-width: 720px) {
-  body {
-    overflow-x: hidden;
+@media (max-width: 768px) {
+  .container {
+    margin: 30px 50px;
   }
   .nav-menu {
     display: none;
@@ -206,6 +203,34 @@ a:any-link {
   .copy-header h2 {
     font-size: 19px;
   }
+  .nav-content-icon-list {
+    display: inline;
+  }
+  .nav-content-icon-grid {
+    display: none;
+  }
+  .content {
+    margin-top: 50px;
+  }
+  .card {
+    width: 430px;
+    height: 230px;
+    padding: 19px 17px;
+    margin: 17px 0px;
+  }
+  .card-body {
+    display: flex;
+    gap: 25px;
+  }
+  .text h3 {
+    font-size: 16px;
+  }
+  .text p {
+    font-size: 12px;
+  }
+  .card-body img {
+    width: 165px;
+  }
   .footer .title {
     font-size: 20px;
   }
@@ -214,5 +239,75 @@ a:any-link {
   }
   .social {
     font-size: 9px;
+  }
+}
+@media (max-width: 561px) {
+  .container {
+    margin: 10px 20px;
+  }
+  .page-header {
+    margin-top: 50px;
+  }
+  .content {
+    margin-top: 20px;
+  }
+  .card {
+    padding: 9px 7px;
+  }
+  .card img {
+    width: 100px;
+    height: 150px;
+  }
+}
+@media (max-width: 426px) {
+  .nav {
+    align-items: center;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .content-menu div {
+    font-size: 20px;
+  }
+  .footer span {
+    padding: 8px;
+  }
+}
+@media (max-width: 390px) {
+  .text h3 {
+    font-size: 14px;
+  }
+  .text p {
+    font-size: 10px;
+  }
+  .nav-page {
+    margin: 30px auto;
+    font-size: 20px;
+  }
+  .footer {
+    align-items: center;
+  }
+  .footer .title {
+    font-size: 15px;
+  }
+}
+@media (max-width: 358px) {
+  .content-menu div {
+    font-size: 14px;
+  }
+  .copy-header h1 {
+    font-size: 30px;
+  }
+  .copy-header h2 {
+    font-size: 20px;
+  }
+  .nav-page {
+    font-size: 16px;
+  }
+  .footer .title {
+    font-size: 10px;
+  }
+  .social {
+    padding: 3px;
   }
 }
